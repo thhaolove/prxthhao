@@ -8,9 +8,9 @@ $config = is_string($raw) ? json_decode($raw, true) : [];
 if (!is_array($config)) $config = [];
 function pageText(array $c,string $k,string $f):string{$v=trim((string)($c[$k]??''));return htmlspecialchars($v!==''?$v:$f,ENT_QUOTES,'UTF-8');}
 function pageURL(array $c,string $k):string{$v=trim((string)($c[$k]??''));return filter_var($v,FILTER_VALIDATE_URL)?htmlspecialchars($v,ENT_QUOTES,'UTF-8'):'';}
-$title=pageText($config,'brandTitle','HMT IPA PRX');
+$title=pageText($config,'brandTitle','THHAO IPA PRX');
 $subtitle=pageText($config,'brandSubtitle','Quản lý thiết bị theo cách của bạn.');
-$browserTitle=pageText($config,'browserTitle','HMT IPA PRX');
+$browserTitle=pageText($config,'browserTitle','THHAO IPA PRX');
 $faviconURL=pageURL($config,'faviconURL');
 $previewImages=[];
 foreach((array)($config['landingPreviewImages']??[]) as $image){$url=trim((string)($image['url']??$image));if(filter_var($url,FILTER_VALIDATE_URL))$previewImages[]=['url'=>htmlspecialchars($url,ENT_QUOTES,'UTF-8'),'alt'=>pageText(is_array($image)?$image:[],'alt','Preview')];}
