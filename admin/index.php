@@ -679,7 +679,7 @@ header('Pragma: no-cache');
       </section>
 
       <section class="page" id="page-info">
-        <div class="card"><h3>Cấu hình Landing Page</h3><p class="sub">Quản lý tên tab trình duyệt, favicon và hai nút tải trên trang chính.</p><div class="grid-2"><div class="field"><label>Tên thương hiệu</label><input id="brandTitle" placeholder="HMT IPA PRX"></div><div class="field"><label>Mô tả</label><input id="brandSubtitle" placeholder="Mô tả ngắn"></div><div class="field wide"><label>Tên trên tab trình duyệt</label><input id="browserTitle" placeholder="HMT IPA PRX — Download"></div><div class="field"><label>Link Get Key</label><input id="getKeyURL" type="url" placeholder="https://.../get-key"></div><div class="field"><label>Link tải file IPA</label><input id="ipaDownloadURL" type="url" placeholder="https://.../APEX.ipa"></div><div class="field"><label>Link favicon</label><input id="faviconURL" type="url" placeholder="https://.../favicon.png"></div><div class="field"><label>Upload favicon</label><input id="faviconUpload" type="file" accept="image/*,.ico"></div><div class="field wide"><label>Link avatar</label><input id="brandAvatarURL" type="url" placeholder="https://.../avatar.png"></div></div></div>
+        <div class="card"><h3>Cấu hình Landing Page</h3><p class="sub">Quản lý tên tab trình duyệt, favicon và hai nút tải trên trang chính.</p><div class="grid-2"><div class="field"><label>Tên thương hiệu</label><input id="brandTitle" placeholder="THHAO IPA PRX"></div><div class="field"><label>Mô tả</label><input id="brandSubtitle" placeholder="Mô tả ngắn"></div><div class="field wide"><label>Tên trên tab trình duyệt</label><input id="browserTitle" placeholder="THHAO IPA PRX — Download"></div><div class="field"><label>Link Get Key</label><input id="getKeyURL" type="url" placeholder="https://.../get-key"></div><div class="field"><label>Link tải file IPA</label><input id="ipaDownloadURL" type="url" placeholder="https://.../APEX.ipa"></div><div class="field"><label>Link favicon</label><input id="faviconURL" type="url" placeholder="https://.../favicon.png"></div><div class="field"><label>Upload favicon</label><input id="faviconUpload" type="file" accept="image/*,.ico"></div><div class="field wide"><label>Link avatar</label><input id="brandAvatarURL" type="url" placeholder="https://.../avatar.png"></div></div></div>
         <div class="card community-section">
           <div class="row-actions">
             <div><h3>Mạng xã hội</h3><p class="sub">Các liên kết xuất hiện dưới phần thiết bị ở trang chủ.</p></div>
@@ -711,8 +711,8 @@ header('Pragma: no-cache');
           <div class="grid-2">
             <div class="field"><label>Version mới nhất</label><input id="latestVersion" placeholder="1.0.1"></div>
             <div class="field"><label>Version tối thiểu có thể dùng</label><input id="minimumVersion" placeholder="1.0.1"></div>
-            <div class="field wide"><label>Link cập nhật IPA</label><input id="updateURL" type="url" placeholder="https://.../HMT IPA PRX-[1.0.1].ipa"></div>
-            <div class="field wide"><label>Upload file IPA</label><input id="ipaVersionUpload" type="file" accept=".ipa,application/octet-stream"><div class="hint">Tên file nên có dạng HMT IPA PRX-[1.0.1].ipa. Giới hạn 500 MB.</div></div>
+            <div class="field wide"><label>Link cập nhật IPA</label><input id="updateURL" type="url" placeholder="https://.../THHAO IPA PRX-[1.0.1].ipa"></div>
+            <div class="field wide"><label>Upload file IPA</label><input id="ipaVersionUpload" type="file" accept=".ipa,application/octet-stream"><div class="hint">Tên file nên có dạng THHAO IPA PRX-[1.0.1].ipa. Giới hạn 500 MB.</div></div>
             <div class="field wide"><label>Nội dung bắt buộc cập nhật</label><textarea id="updateMessage" placeholder="Vui lòng cập nhật phiên bản mới nhất để tiếp tục sử dụng."></textarea></div>
           </div>
           <label class="check"><input type="checkbox" id="forceUpdate"> Bắt buộc cập nhật nếu app thấp hơn version tối thiểu</label>
@@ -768,7 +768,7 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&
 
 function emptyData(){
   return {
-    noticeTitle: '', noticeMessage: '', maintenanceEnabled:false, maintenanceTitle:'MAINTENANCE', maintenanceMessage:'', brandTitle:'HMT IPA PRX', brandSubtitle:'', browserTitle:'', faviconURL:'', brandAvatarURL:'', landingPreviewImageURL:'', getKeyURL:'', ipaDownloadURL:'', latestVersion:'1.0.0', minimumVersion:'1.0.0', forceUpdate:false, updateURL:'', updateMessage:'', versionHistory:[], cardOpacity:0.92,
+    noticeTitle: '', noticeMessage: '', maintenanceEnabled:false, maintenanceTitle:'MAINTENANCE', maintenanceMessage:'', brandTitle:'THHAO IPA PRX', brandSubtitle:'', browserTitle:'', faviconURL:'', brandAvatarURL:'', landingPreviewImageURL:'', getKeyURL:'', ipaDownloadURL:'', latestVersion:'1.0.0', minimumVersion:'1.0.0', forceUpdate:false, updateURL:'', updateMessage:'', versionHistory:[], cardOpacity:0.92,
     musicEnabled: false, musicSource: 'audio', musicURL: '',
     backgroundType: 'none', backgroundImageURL: '', backgroundVideoURL: '', backgroundContentMode: 'cover',
     pageVisibility: { home:true, games:true, patches:true, wallpaper:true, files:true, cleaner:true },
@@ -936,7 +936,7 @@ function animateGameRows(){
   gsap.fromTo(rows,{y:24,scale:.975},{y:0,scale:1,duration:.52,stagger:.055,ease:'power3.out',clearProps:'transform'});
 }
 function bindForms(){
-  $('#brandTitle').value = data.brandTitle || 'HMT IPA PRX';
+  $('#brandTitle').value = data.brandTitle || 'THHAO IPA PRX';
   $('#brandSubtitle').value = data.brandSubtitle || '';
   $('#browserTitle').value = data.browserTitle || '';
   $('#faviconURL').value = data.faviconURL || '';
